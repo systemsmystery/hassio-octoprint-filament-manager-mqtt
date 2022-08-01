@@ -1,10 +1,10 @@
 ---
 name: "Octoprint Filament Manager MQTT"
-version: "1.0.2"
+version: "1.0.3"
 slug: "octoprint-filament-manager-mqtt"
 url: "https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt"
 description: "Octoprint Filament Manager to MQTT"
-image: ohheyrj/hassio-addon-octoprint-filament-manager-mqtt-{arch}
+image: ghcr.io/systemsmystery/hassio-addon-octoprint-filament-manager-mqtt/{arch}
 arch:
     - aarch64
     - arm64
