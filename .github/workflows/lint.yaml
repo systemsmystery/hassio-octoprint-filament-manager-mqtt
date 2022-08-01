@@ -1,19 +1,22 @@
 ---
-name: Hadolint
-
+name: 'Lint'
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: ["main"]
-  schedule:
-    - cron: '19 20 * * 3'
-
-permissions:
-  contents: read
 
 jobs:
+  yamllint:
+    name: 'Yamllint'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Yamllint'
+        uses: karancode/yamllint-github-action@master
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   hadolint:
     name: Run hadolint scanning
     runs-on: ubuntu-latest
@@ -38,3 +41,10 @@ jobs:
         with:
           sarif_file: hadolint-results.sarif
           wait-for-processing: true
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run ShellCheck
+      uses: ludeeus/action-shellcheck@master
