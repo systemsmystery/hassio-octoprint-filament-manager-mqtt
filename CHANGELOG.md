@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/compare/v1.0.5...v1.0.6) (2022-08-01)
+
+
+### Miscellaneous Chores
+
+* Release 1.0.6 ([8cdfe9f](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/8cdfe9f703553927cc1129bdb00c8062c08a306b))
+
 ## [1.0.5](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/compare/v1.0.4...v1.0.5) (2022-08-01)
 
 
