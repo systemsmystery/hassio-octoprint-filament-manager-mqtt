@@ -19,8 +19,9 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
       - name: Publish
         uses: home-assistant/builder@master
@@ -28,7 +29,7 @@ jobs:
           args: |
             --all \
             --target /data/octoprint-filament-manager-mqtt \
-            --docker-hub ohheyrj
+            --docker-hub ghrc.io/systemsmystery/
         env:
           CAS_API_KEY: ${{ secrets.CAS_API_KEY }}
         if: ${{ steps.release.outputs.release_created }}
