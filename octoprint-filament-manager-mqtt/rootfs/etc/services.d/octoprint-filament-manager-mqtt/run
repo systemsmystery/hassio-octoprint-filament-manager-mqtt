@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bashio
+#bashio::log.level "info"
+bashio::log.info "Starting OctoPrint Filament Manager MQTT..."
+
+export MQTT_PORT=$(bashio::config 'mqtt_port')
+export MQTT_ADDRESS=$(bashio::config 'mqtt_address')
+export MQTT_TOPIC=$(bashio::config 'mqtt_topic')
+export MQTT_USERNAME=$(bashio::config 'mqtt_username')
+export MQTT_PASSWORD=$(bashio::config 'mqtt_password')
+
+export UPDATE_INTERVAL=$(bashio::config 'update_interval')
+
+export OCTOPRINT_ADDRESS=$(bashio::config 'octoprint_address')
+export OCTOPRINT_API_KEY=$(bashio::config 'octoprint_api_key')
+export OCTOPRINT_USE_SSL=$(bashio::config 'octoprint_use_ssl')
+
+exec python3 -u /usr/bin/octoprint-filament-manager-mqtt.py >&2
