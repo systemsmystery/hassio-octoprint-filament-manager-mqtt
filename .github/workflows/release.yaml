@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - main
-name: release-please
+name: release
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
@@ -28,7 +28,7 @@ jobs:
         with:
           args: |
             --all \
-            --target /data/octoprint-filament-manager-mqtt 
+            --target /data/octoprint-filament-manager-mqtt
         env:
           CAS_API_KEY: ${{ secrets.CAS_API_KEY }}
         if: ${{ steps.release.outputs.release_created }}
