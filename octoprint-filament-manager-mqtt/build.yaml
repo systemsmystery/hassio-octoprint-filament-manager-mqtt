@@ -6,4 +6,3 @@ build_from:
     armv7: ghcr.io/hassio-addons/base/armv7:12.2.2
     i386: ghcr.io/hassio-addons/base/i386:12.2.2
     arm64: ghcr.io/hassio-addons/base/arm64:12.2.2
-
