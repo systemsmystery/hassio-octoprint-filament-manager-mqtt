@@ -9,7 +9,7 @@ import time
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('main')
 
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 OCTOPRINT_API_KEY = os.environ.get('OCTOPRINT_API_KEY')
 OCTOPRINT_ADDRESS = os.environ.get('OCTOPRINT_ADDRESS')
