@@ -1,0 +1,40 @@
+---
+name: "Octoprint Filament Manager MQTT"
+version: "1.0.0"
+slug: "octoprint-filament-manager-mqtt"
+url: "https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt"
+description: "Octoprint Filament Manager to MQTT"
+image: ohheyrj/hassio-addon-octoprint-filament-manager-mqtt-{arch}
+arch:
+    - aarch64
+    - arm64
+    - armhf
+    - armv7
+    - i386
+    - amd64
+boot: "manual"
+init: false
+options:
+    octoprint:
+        octoprint_address: null
+        octoprint_api_key: null
+        octoprint_use_ssl: false
+    mqtt:
+        mqtt_address: null
+        mqtt_port: 1883
+        mqtt_topic: "octoprintFilamentManager"
+        mqtt_username: null
+        mqtt_password: null
+    update_interval: 60
+schema:
+    octoprint:
+        octoprint_address: str
+        octoprint_api_key: str
+        octoprint_use_ssl: bool
+    mqtt:
+        mqtt_address: str
+        mqtt_port: int
+        mqtt_topic: str
+        mqtt_username: str?
+        mqtt_password: str?
+    update_interval: int

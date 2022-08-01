@@ -1,0 +1,21 @@
+---
+name: Build Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Test Build
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: "Build Octoprint Filament Manager MQTT add-on"
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --test \
+            --all \
+            --target /data/octoprint-filament-manager-mqtt \
+            --docker-hub ohheyrj
