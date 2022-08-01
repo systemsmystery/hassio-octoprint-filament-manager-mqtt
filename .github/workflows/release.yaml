@@ -28,8 +28,7 @@ jobs:
         with:
           args: |
             --all \
-            --target /data/octoprint-filament-manager-mqtt \
-            --docker-hub ghrc.io/systemsmystery
+            --target /data/octoprint-filament-manager-mqtt 
         env:
           CAS_API_KEY: ${{ secrets.CAS_API_KEY }}
         if: ${{ steps.release.outputs.release_created }}

@@ -7,7 +7,6 @@ description: "Octoprint Filament Manager to MQTT"
 image: ghcr.io/systemsmystery/hassio-addon-octoprint-filament-manager-mqtt/{arch}
 arch:
     - aarch64
-    - arm64
     - armhf
     - armv7
     - i386
