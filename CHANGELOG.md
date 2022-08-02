@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/compare/v1.0.8...v1.1.0) (2022-08-02)
+
+
+### Bug Fixes
+
+* fixed yaml config options not working ([2af5011](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/2af5011cca0f62781806e36ca0fd8f4693ae0a6d))
+* removed base image codenotary ([13ba2d0](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/13ba2d0be0952b9bd7e6d163a05ac0a11b14a0be))
+
+
+### Miscellaneous Chores
+
+* Release 1.1.0 ([4a04b3d](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/4a04b3d55e829a383db7c47740aa3eead263c0e9))
+* Release 1.1.0 ([2893acd](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/2893acd8c15f32459bf022e1d618a4e2fa6a2bc4))
+* Release 1.1.0 ([0b30e84](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/0b30e84e18469d4f7e591736f9b7a353da16a604))
+* Release 1.1.1 ([9bcfa1b](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/commit/9bcfa1b9827095461ff7ccc1eb5740296f1979bc))
+
 ## [1.0.8](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/compare/v1.0.7...v1.0.8) (2022-08-02)
 
 
