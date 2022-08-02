@@ -1,6 +1,6 @@
 ---
 name: "Octoprint Filament Manager MQTT"
-version: "1.0.6"
+version: "1.0.7"
 slug: "octoprint-filament-manager-mqtt"
 url: "https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt"
 description: "Octoprint Filament Manager to MQTT"
