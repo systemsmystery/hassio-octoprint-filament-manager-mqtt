@@ -6,10 +6,11 @@ import json
 import logging
 import time
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+logging.basicConfig(level=LOGLEVEL, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('main')
 
-VERSION = "1.0.8"
+VERSION = "1.1.0"
 
 OCTOPRINT_API_KEY = os.environ.get('OCTOPRINT_API_KEY')
 OCTOPRINT_ADDRESS = os.environ.get('OCTOPRINT_ADDRESS')
@@ -44,7 +45,7 @@ def post_api_call(url, data):
     return response.json()
 
 def send_to_mqtt(topic, payload):
-    logger.info('Sending to MQTT: {} {}'.format(topic, payload))
+    logger.debug('Sending to MQTT: {} {}'.format(topic, payload))
     client = mqtt.Client()
 
     if MQTT_USERNAME and MQTT_PASSWORD:
@@ -191,4 +192,5 @@ while True:
             }
         }
         send_to_mqtt('homeassistant/sensor/' + spool_name + '_REMAINING/config', json.dumps(remaining_config))
+    logger.info(f'Sleeping for {UPDATE_INTERVAL}')
     time.sleep(UPDATE_INTERVAL)

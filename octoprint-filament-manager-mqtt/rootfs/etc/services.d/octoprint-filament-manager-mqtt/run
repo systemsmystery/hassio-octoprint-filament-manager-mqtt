@@ -1,17 +1,32 @@
 #!/usr/bin/with-contenv bashio
-#bashio::log.level "info"
+# shellcheck shell=bash
 bashio::log.info "Starting OctoPrint Filament Manager MQTT..."
 
-export MQTT_PORT=$(bashio::config 'mqtt_port')
-export MQTT_ADDRESS=$(bashio::config 'mqtt_address')
-export MQTT_TOPIC=$(bashio::config 'mqtt_topic')
-export MQTT_USERNAME=$(bashio::config 'mqtt_username')
-export MQTT_PASSWORD=$(bashio::config 'mqtt_password')
+LOGLEVEL=$(bashio::config 'loglevel')
+bashio::log.info "Using log level ${LOGLEVEL}"
 
-export UPDATE_INTERVAL=$(bashio::config 'update_interval')
+MQTT_PORT=$(bashio::config 'mqtt.mqtt_port')
+MQTT_ADDRESS=$(bashio::config 'mqtt.mqtt_address')
+MQTT_TOPIC=$(bashio::config 'mqtt.mqtt_topic')
+MQTT_USERNAME=$(bashio::config 'mqtt.mqtt_username')
+MQTT_PASSWORD=$(bashio::config 'mqtt.mqtt_password')
+bashio::log.info "Using server mqtt://${MQTT_ADDRESS}:${MQTT_PORT} with username ${MQTT_USERNAME} and topic ${MQTT_TOPIC}"
 
-export OCTOPRINT_ADDRESS=$(bashio::config 'octoprint_address')
-export OCTOPRINT_API_KEY=$(bashio::config 'octoprint_api_key')
-export OCTOPRINT_USE_SSL=$(bashio::config 'octoprint_use_ssl')
+UPDATE_INTERVAL=$(bashio::config 'update_interval')
+
+OCTOPRINT_ADDRESS=$(bashio::config 'octoprint.octoprint_address')
+OCTOPRINT_API_KEY=$(bashio::config 'octoprint.octoprint_api_key')
+OCTOPRINT_USE_SSL=$(bashio::config 'octoprint.octoprint_use_ssl')
+
+export MQTT_PORT
+export MQTT_ADDRESS
+export MQTT_TOPIC
+export MQTT_USERNAME
+export MQTT_PASSWORD
+export UPDATE_INTERVAL
+export OCTOPRINT_ADDRESS
+export OCTOPRINT_API_KEY
+export OCTOPRINT_USE_SSL
+export LOGLEVEL
 
 exec python3 -u /usr/bin/octoprint-filament-manager-mqtt.py >&2
