@@ -9,4 +9,3 @@ build_from:
 codenotary:
   signer: richard+git@ohheyrj.co.uk
 image: "ohheyrj/hassio-addon-octoprint-filament-manager-mqtt-{arch}"
-shadow_repository: "ghcr.io/systemsmystery"
