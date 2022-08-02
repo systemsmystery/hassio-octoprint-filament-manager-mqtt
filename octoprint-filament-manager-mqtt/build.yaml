@@ -7,5 +7,4 @@ build_from:
     i386: ghcr.io/hassio-addons/base/i386:12.2.2
 codenotary:
     signer: richard+git@ohheyrj.co.uk
-    base_image: notary@home-assistant.io
 image: "ohheyrj/hassio-addon-octoprint-filament-manager-mqtt-{arch}"
