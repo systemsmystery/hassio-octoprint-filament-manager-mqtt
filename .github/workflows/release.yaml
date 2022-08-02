@@ -16,15 +16,27 @@ jobs:
         with:
           release-type: simple
           package-name: release-please-action
-  check:
+  build:
     runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.release_created }}
     needs: release
+    name: Build Octoprint Filament Manager MQTT ${{ matrix.arch }} add-on
+    strategy:
+      matrix:
+        arch: ["aarch64", "amd64", "armhf", "armv7", "i386"]
     steps:
-      - name: Echo
-        run: echo ${{ needs.release.outputs.release_created }}
-      - name: Failed release
-        if: ${{ ! needs.release.outputs.release_created }}
-        run: exit 1
-      - name: Passed
-        if: ${{ needs.release.outputs.release_created }}
-        run: exit 0
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Publish
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --${{ matrix.arch }} \
+            --target /data/octoprint-filament-manager-mqtt
+        env:
+          CAS_API_KEY: ${{ secrets.CAS_API_KEY }}
