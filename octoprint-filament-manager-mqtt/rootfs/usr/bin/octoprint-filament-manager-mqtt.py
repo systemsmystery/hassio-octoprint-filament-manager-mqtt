@@ -10,7 +10,7 @@ LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 logging.basicConfig(level=LOGLEVEL, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('main')
 
-VERSION = "1.1.0"
+VERSION = "1.1.2"
 
 OCTOPRINT_API_KEY = os.environ.get('OCTOPRINT_API_KEY')
 OCTOPRINT_ADDRESS = os.environ.get('OCTOPRINT_ADDRESS')

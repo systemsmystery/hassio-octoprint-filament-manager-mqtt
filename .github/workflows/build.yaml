@@ -2,8 +2,7 @@
 on:
   workflow_run:
     workflows: [release]
-      types:
-        - [completed]
+    types: [completed]
 jobs:
   build:
     needs: release
