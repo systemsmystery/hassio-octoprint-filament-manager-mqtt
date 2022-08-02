@@ -21,7 +21,7 @@ jobs:
     needs: release
     steps:
       - name: Failed release
-        if: ${{ !jobs.release.outputs.release_created }}
+        if: ${{ ! jobs.release.outputs.release_created }}
         run: exit 1
       - name: Passed
         if: ${{ jobs.release.outputs.release_created }}
