@@ -49,8 +49,7 @@ jobs:
     name: markdown
     runs-on: ubuntu-latest
     steps:
-    - name: Markdown Linting Action
-      uses: avto-dev/markdown-lint@v1.5.0
-      with:
-        args: './README.md'
-
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v3.1.0
+        with:
+          files: .
