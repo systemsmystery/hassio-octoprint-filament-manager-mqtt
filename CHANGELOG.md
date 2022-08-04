@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/systemsmystery/hassio-octoprint-filament-manager-mqtt/compare/v1.1.2...v1.2.0) (2022-08-04)
+
+
+### Features
+
+* added readme ([5f2a400](https://github.com/systemsmystery/hassio-octoprint-filament-manager-mqtt/commit/5f2a40000d1e7da04092e3b2471b49ef7a579d9a))
+* images for readme ([78293f8](https://github.com/systemsmystery/hassio-octoprint-filament-manager-mqtt/commit/78293f8d62772762e3874cea1bd22dc78322cd2c))
+
+
+### Miscellaneous Chores
+
+* Release 1.2.0 ([81c1ebb](https://github.com/systemsmystery/hassio-octoprint-filament-manager-mqtt/commit/81c1ebb4b40728860ffc02614c49247a34c5afec))
+
 ## [1.1.2](https://github.com/systemsmystery/addon-octoprint-filament-manager-mqtt/compare/v1.1.0...v1.1.2) (2022-08-02)
 
 
