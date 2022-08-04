@@ -8,7 +8,6 @@ A Home Assistant Add-On to create sensors for each spool within Octoprint Filame
 
 ![Lint Workflow][lint-workflow] ![Build Test Workflow][build-test-workflow] ![Release Workflow][release-workflow]
 
-
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg?style=flat-square
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg?style=flat-square
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg?style=flat-square
@@ -28,7 +27,6 @@ The easiest way to install the add-on is to add this repo to Supervisor.
 2. Paste `https://github.com/systemsmystery/hassio-octoprint-filament-manager-mqtt` into the add box and click **Add**
 3. Click the **Octoprint Filament Manager MQTT** add-on in the list
 4. Click **Install**
-
 
 ## Configuration
 
