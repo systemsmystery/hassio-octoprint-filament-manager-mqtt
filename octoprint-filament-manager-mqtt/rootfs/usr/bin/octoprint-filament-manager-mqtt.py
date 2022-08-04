@@ -10,7 +10,7 @@ LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 logging.basicConfig(level=LOGLEVEL, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('main')
 
-VERSION = "1.1.2"
+VERSION = "1.2.0"
 
 OCTOPRINT_API_KEY = os.environ.get('OCTOPRINT_API_KEY')
 OCTOPRINT_ADDRESS = os.environ.get('OCTOPRINT_ADDRESS')
@@ -62,7 +62,7 @@ else:
 
 logger.info('Starting filament manager')
 logger.info(f'Using Octoprint Address: {url}')
-logger.info(f'Using Octoprint API Key: {OCTOPRINT_API_KEY}')
+logger.info(f'Using Octoprint API key ending: {OCTOPRINT_API_KEY[-4:]}')
 logger.info(f'Using MQTT Address: {MQTT_ADDRESS}:{MQTT_PORT}')
 
 while True:
