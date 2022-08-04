@@ -49,7 +49,9 @@ jobs:
     name: markdown
     runs-on: ubuntu-latest
     steps:
-      - name: markdownlint-cli
-        uses: nosborn/github-action-markdown-cli@v3.1.0
+      - name: Lint changelog file
+        uses: avto-dev/markdown-lint@v1
         with:
-          files: .
+          rules: '/lint/rules/changelog.js'
+          config: '/lint/config/changelog.yml'
+          args: './CHANGELOG.md'
