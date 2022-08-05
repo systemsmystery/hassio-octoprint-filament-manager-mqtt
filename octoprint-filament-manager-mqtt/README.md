@@ -55,7 +55,7 @@ When started, the add-on will create a sensor for each spool within the Octoprin
 
 Below is an example of what the sensor looks like within Home Assistant:
 
-![Sensor example](images/sensor.jpg)
+![Sensor example](./images/sensor.jpg)
 
 In addition to each spool sensor, an additional sensor is created which supplies a drop down with each spool ID. This will update and reflect which spool is currently active.
 
