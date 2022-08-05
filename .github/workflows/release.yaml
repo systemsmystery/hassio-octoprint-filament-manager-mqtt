@@ -16,6 +16,7 @@ jobs:
         with:
           release-type: simple
           package-name: release-please-action
+          changelog-path: './octoprint-filament-manager-mqtt/CHANGELOG.md'
   build:
     runs-on: ubuntu-latest
     if: ${{ needs.release.outputs.release_created }}
